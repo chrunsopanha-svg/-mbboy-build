@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mbboy.smoothtool'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.mbboy.smoothtool"
+        minSdk 21          // OPPO A7 ships with Android 8.1 (API 27); 21 keeps older phones working
+        targetSdk 34
+        versionCode 1
+        versionName "0.1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+// No dependencies on purpose: framework classes only, so the APK stays tiny.
+dependencies {
+}
